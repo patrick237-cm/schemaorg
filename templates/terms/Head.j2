@@ -9,11 +9,21 @@
     <link rel="stylesheet" type="text/css" href="{{docsdir}}/devnote.css" />
     <link rel="stylesheet" type="text/css" href="{{docsdir}}/prettify.css" />
     <script src="{{docsdir}}/prettify.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/sdoheader.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="{{docsdir}}/schemaorg.js"></script>
 <!-- <script src="{{docsdir}}/debugwindow/viewconsole.js"></script> -->
     <script src="{{docsdir}}/sdotermpage.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{docsdir}}/sdotermpage.css" />
+    {% if "newtables" in BUILDOPTS %}
+        <link rel="stylesheet" type="text/css" href="{{docsdir}}/sdotermpage-new.css" />
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="{{docsdir}}/sdotermpage.css" />
+    {% endif %}
     <script src="{{docsdir}}/pretty-markup/schemarama-parsing.bundle.min.js"></script>
     <script src="{{docsdir}}/pretty-markup/layout.js"></script>
     <link rel="stylesheet" type="text/css" href="{{docsdir}}/pretty-markup/style.css" />

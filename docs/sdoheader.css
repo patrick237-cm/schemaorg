@@ -1,0 +1,115 @@
+
+#headerwrap {
+    width: 100%;
+    background-color: #990000;
+}
+
+#header {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    background-color: #990000;
+    min-height: 80px;
+    padding-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 960px){
+    #header {
+        max-width: 960px;
+        padding: 1em 0 1em 0;
+    }
+}
+
+.navbar.navbar-custom {
+    background-color: #990000!important;
+    font-size: 16px;
+}
+
+
+.navbar-custom .navbar-brand {
+    max-width: 500px;
+    min-width: auto;
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+    vertical-align: middle;
+    font: bold 24px Helvetica, Arial, sans-serif;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 0 #510000;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255,255,255,.5);
+}
+
+.navbar.navbar-custom a {
+    border: 0;
+
+}
+
+.navbar.navbar-custom .nav-link {
+    color: rgba(255,255,255,.7);
+}
+
+.navbar.navbar-custom .nav-link:hover {
+    color: rgba(255,255,255,.9);
+}
+
+#cse-search-form2{
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 10px;
+}  
+
+.h1black{
+    color: black;
+}
+
+.header-bottom {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #202020;
+    opacity: 20%;
+  }
+
+/* GSC Stuff */
+#cse-search-form2 #___gcse_0 {
+    width: 200px;
+    padding-right: 0;
+    }
+    #cse-search-form2 .gsib_a {
+    padding: 3px 9px 3px 9px;
+    }
+    #cse-search-form2 .gsib_b {
+    display: none;
+    }
+    #cse-search-form2 .gsc-input-box {
+    border: none;
+    }
+    #cse-search-form2 form.gsc-search-box,#main-header table.gsc-search-box {
+    margin-bottom: 0;
+    font-size: 1rem;
+    }
+    #cse-search-form2 table.gsc-search-box td.gsc-input {
+    padding-right: 0;
+    font-size: 1rem;
+    }
+    #cse-search-form2 .gsc-search-button.gsc-search-button-v2 {
+    background: rgba(255,255,255,.2) !important;
+    border-radius: 0 10px 10px 0;
+    border: none !important;
+    margin: 0 0 1px 0;
+    padding: 10px 10px 9px 8px;
+    }
+    #cse-search-form2 #gsc-iw-id1 {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #dee2e6;
+    padding: 0;
+    }
+    #cse-search-form2 #gs_tti50 input {
+    font-size: 1rem;
+    background: none !important;
+    }
+   
