@@ -23,7 +23,7 @@
 
 .navbar.navbar-custom {
     background-color: #990000!important;
-    font-size: 16px;
+    font-size: 1.1rem;
 }
 
 
@@ -34,7 +34,7 @@
     color: #fff;
     margin: 0;
     vertical-align: middle;
-    font: bold 24px Helvetica, Arial, sans-serif;
+    font: bold 1.8rem Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
     text-shadow: 0 2px 0 #510000;
 }
@@ -54,6 +54,32 @@
 
 .navbar.navbar-custom .nav-link:hover {
     color: rgba(255,255,255,.9);
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+@media (min-width: 768px){
+    .navbar.navbar-custom .nav-item{
+        width: max-content;
+    }
+}
+
+.navbar.navbar-custom .dropdown-menu {
+    font-size: 16px;
+}
+
+
+.dropdown.show .dropdown-toggle::after {
+    transform:rotate(180deg);
 }
 
 #cse-search-form2{

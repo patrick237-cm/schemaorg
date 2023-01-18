@@ -2,7 +2,7 @@
 </style>
 <div id="headerwrap">
   <div id="header">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top navbar-custom">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top navbar-custom">
     <div class="w-100 d-flex flex-grow-1">
         <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
         <div class="navbar-header">
@@ -20,8 +20,17 @@
           <li class="nav-item">
               <a href="/docs/documents.html" class="nav-link">Docs</a>
           </li>
-          <li class="nav-item">
-              <a href="/docs/schemas.html" class="nav-link">Schemas</a>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="SchemasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Schemas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="SchemasDropdown">
+                <div class="dropdown-item">Schemas</div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/Thing">One page per type</a>
+                <a class="dropdown-item" href="/docs/full.html">Full list of types</a>
+                <a class="dropdown-item" href="/docs/schemas.html">Organization of schemas</a>
+              </div>
           </li>
           <li class="nav-item">
             <a href="https://validator.schema.org" class="nav-link">Validate</a>
