@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+/* 
 body, html {
     padding: 0;
-    font: 14px "Roboto", Helvetica, Arial, sans-serif;
+    font: 1rem "Roboto", Helvetica, Arial, sans-serif;
 }
+*/
 
 .triple-row {
     display: flex;
