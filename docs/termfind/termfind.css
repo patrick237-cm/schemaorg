@@ -1,8 +1,23 @@
-#termfindwrap {
-    display: inline-flex;
-    position: absolute;
-    flex-direction: column;
+
+@media all and (min-width: 960px) {
+    #termfindwrap {
+        display: inline-flex;
+        padding-top: 0;
+        position: absolute;
+        flex-direction: column;
+    }
+    
 }
+@media all and (max-width: 960px) {
+    #termfindwrap {
+        display: flex;
+        padding-top: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}
+
 #termfind {
     display: block;
     margin: auto;
@@ -12,6 +27,7 @@
     border-radius: 5px;
     outline: none;
 }
+
 #termfindprompt {
     display: inline-block;
     padding-left: 10px;
