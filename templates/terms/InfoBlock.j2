@@ -47,12 +47,16 @@
             </ul>
     </div>
     </div>
-	
+
 	<!-- Description of term -->
     <div class="description">{{term.comment|safe}}</div>
-        {% if term.termType == "Enumerationvalue" %}
+    {% if term.termType == "Enumerationvalue" and not EXTERNENUM %}
        <br/> A member value for enumeration type: {{sdotermlink(term.enumerationParent)}}
     {% endif %}
+    {% if EXTERNENUM %}
+        {% include 'terms/ExternalEnumerationInfoBlock.j2' with context %}
+    {% endif %}
+
     {% for sup in term.supers %}
         {% if sup.termType == "Reference" %}
             {% if loop.first %}<br/><strong>{% if TERMTYPE == "Property" %}Subproperty{% else %}Subclass{% endif%} of:</strong><ul>{%else %}<br/>{% endif %}

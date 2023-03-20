@@ -1,0 +1,12 @@
+<!-- ExternalEnumerationInfoBlock -->
+<div style="margin: 10px" id="externinfoblock">
+    URI Template: {{ term.externalUriPrefix|safe }}<em>{value}</em>
+    <br/><br/>
+    {% for ex in term.externalUriExamples %}
+    Example URI Member: <a href="{{ ex }}">{{ex}}</a>
+    <br/>
+    {% endfor %}
+    <br/>
+    Source information: <a href="{{ term.externalUriSource|safe }}">{{ term.externalUriSource|safe }}</a>
+</div> 
+<br/>

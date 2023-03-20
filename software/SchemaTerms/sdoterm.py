@@ -87,6 +87,11 @@ class SdoEnumerationvalue(SdoTerm):
     def __init__(self,Id,uri,label):
         SdoTerm.__init__(self,SdoTerm.ENUMERATIONVALUE,Id,uri,label)
         self.enumerationParent = ""
+        self.expectedTypeFor = []
+        self.externalenum = False
+        self.externalUriPrefix = None
+        self.externalUriExamples = []
+        self.externalUriSource = None
 
 
 class SdoReference(SdoTerm):

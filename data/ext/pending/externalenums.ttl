@@ -1,0 +1,47 @@
+@prefix : <https://schema.org/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ExternalEnumeration a rdfs:Class;
+    rdfs:label "ExternalEnumeration";
+    rdfs:subClassOf :Enumeration;
+    rdfs:comment "Base type for external enumerations" .
+
+:externalUriPrefix a rdf:Property ;
+    rdfs:label "externalUriPrefix" ;
+    :domainIncludes :ExternalEnumeration ;
+    :rangeIncludes :URL ;
+    rdfs:comment "URI Prefix for extern Enumeration member terms." .
+
+:externalUriExample a rdf:Property ;
+    rdfs:label "externalUriExample" ;
+    :domainIncludes :ExternalEnumeration ;
+    :rangeIncludes :URL ;
+    rdfs:comment "Example URI for an external enumeration member." .
+
+:externalUriSource a rdf:Property ;
+    rdfs:label "externalUriSource" ;
+    :domainIncludes :ExternalEnumeration ;
+    :rangeIncludes :URL ;
+    rdfs:comment "Link to externally provided source information for external enumeration." .
+
+:LCNAF a :ExternalEnumeration;
+    rdfs:label "LCNAF";
+    rdfs:comment "**Library of Congress Name Authority File** - External enumeration values for agents, such as person and organization, names curated by The Library of Congress.";
+    :externalUriPrefix "http://id.loc.gov/authorities/names/";
+    :externalUriExample "http://id.loc.gov/authorities/names/no2017146789";
+    :externalUriSource "https://id.loc.gov/authorities/names.html".
+
+:FoodOn a :ExternalEnumeration;
+    rdfs:label "FoodOn";
+    rdfs:comment "**FoodOn Food Ontology** - External enumeration values for foods. For example [Butter](http://purl.obolibrary.org/obo/FOODON_03310351), [Burrito](http://purl.obolibrary.org/obo/FOODON_00002510), [Cannelloni](http://purl.obolibrary.org/obo/FOODON_00002831).";
+    :externalUriPrefix "http://purl.obolibrary.org/obo/";
+    :externalUriExample "http://purl.obolibrary.org/obo/FOODON_03310351";
+    :externalUriExample "http://purl.obolibrary.org/obo/FOODON_00002510";
+    :externalUriExample "http://purl.obolibrary.org/obo/FOODON_00002831";
+    :externalUriSource "https://foodon.org/".
+

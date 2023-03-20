@@ -143,9 +143,14 @@ class SDOGraphSetupTestCase(unittest.TestCase):
     nri1= ('''SELECT ?prop ?c1
      WHERE {
          ?prop <https://schema.org/rangeIncludes> ?c1 .
-         OPTIONAL{
-            ?c1 rdf:type ?c2 .
-            ?c1 rdf:type rdfs:Class .
+         {
+            {
+              ?c1 rdf:type ?c2 .
+              ?c1 rdf:type rdfs:Class .
+          } UNION {
+              ?c1 rdf:type ?c2 .
+              ?c1 rdf:type schema:ExternalEnumeration .
+          }
          }.
          FILTER (!BOUND(?c2))
         FILTER NOT EXISTS { ?prop <https://schema.org/isPartOf> <http://attic.schema.org> .}
@@ -160,10 +165,12 @@ class SDOGraphSetupTestCase(unittest.TestCase):
     nri1= ('''SELECT ?prop ?c1
      WHERE {
          ?prop <https://schema.org/domainIncludes> ?c1 .
-         OPTIONAL{
+         {
+          OPTIONAL {
             ?c1 rdf:type ?c2 .
             ?c1 rdf:type rdfs:Class .
-         }.
+          }    
+        }.
          FILTER (!BOUND(?c2))
         FILTER NOT EXISTS { ?prop <https://schema.org/isPartOf> <http://attic.schema.org> .}
                  }

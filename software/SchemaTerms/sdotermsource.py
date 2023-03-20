@@ -148,7 +148,7 @@ class SdoTermSource():
         self.termdesc.superPaths = self.getParentPaths() #MUST be called after supers has been added to self.termdesc
         
         #Class (Type) Building
-        if self.ttype == SdoTerm.TYPE or self.ttype == SdoTerm.DATATYPE or self.ttype == SdoTerm.ENUMERATION:
+        if self.ttype == SdoTerm.TYPE or self.ttype == SdoTerm.DATATYPE or self.ttype == SdoTerm.ENUMERATION :
             self.termdesc.properties = self.getProperties(getall=False)
             self.termdesc.allproperties = self.getProperties(getall=True)
             self.termdesc.expectedTypeFor = self.getTargetOf()
@@ -156,12 +156,20 @@ class SdoTermSource():
                 if not len(self.termdesc.properties):
                     self.termdesc.termStack = []
             self.termdesc.enumerationMembers = self.getEnumerationMembers()
+
         elif self.ttype == SdoTerm.PROPERTY:
             self.termdesc.domainIncludes = self.getDomains()
             self.termdesc.rangeIncludes = self.getRanges()
             self.termdesc.inverse = self.getInverseOf()
+
         elif self.ttype == SdoTerm.ENUMERATIONVALUE:
-            pass
+            if self.termdesc.enumerationParent == "ExternalEnumeration":
+                self.termdesc.expectedTypeFor = self.getTargetOf()
+                self.termdesc.externalenum = True
+                self.termdesc.externalUriPrefix = self.loadValue("schema:externalUriPrefix")
+                self.termdesc.externalUriExamples = self.loadObjects("schema:externalUriExample")
+                self.termdesc.externalUriSource = self.loadValue("schema:externalUriSource")
+    
         elif self.ttype == SdoTerm.REFERENCE:
             self.termdesc.label = prefixedIdFromUri(self.uri)
             self.termdesc.comment = self.getComment()
@@ -668,6 +676,7 @@ class SdoTermSource():
                 termdesc.inverse = SdoTermSource.termFromId(termdesc.inverse)
             elif termdesc.termType == SdoTerm.ENUMERATIONVALUE:
                 termdesc.enumerationParent = SdoTermSource.termFromId(termdesc.enumerationParent)
+                termdesc.expectedTypeFor = SdoTermSource.termsFromIds(termdesc.expectedTypeFor)
 
             if not depth: #Expand the indivdual termdescs in the terms' termstack but prevent recursion further.
                 stack = []
