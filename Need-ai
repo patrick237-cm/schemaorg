@@ -1,0 +1,34 @@
+<script type="application\/ld+json">
+{
+  "@context": "https:\/\/s",
+  "@type": "Organization",
+  "name": "Need-AI",
+  "description": "Artificial intelligence marketplace",
+  "logo": "URL du logo de l'organisation",
+  "url": "Need-ai.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+237681275747",
+    "email": "contact@need.com",
+    "contactType": "5747",
+    "availableLanguage": [
+      {
+        "@type": "Language",
+        "name": "Français"
+      },
+      {
+        "@type": "Language",
+        "name": "Anglais"
+      }
+    ]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Adresse de rue",
+    "addressLocality": "lagos",
+    "postalCode": "Code postal",
+    "addressCountry": "nigeria"
+  },
+  "openingHours": "Horaires d'ouverture de l'organisation"
+}
+<\/script>
